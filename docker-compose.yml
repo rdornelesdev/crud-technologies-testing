@@ -10,7 +10,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USERNAME: ${POSTGRES_USERNAME}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-    command: ./wait-for-it.sh db npm run dev # aguarda o banco de dados ficar 100% pronto para executar (sem isso pode dar erro de tentar executar o banco sem ele ter sido iniciado ainda)
+    command: sh -c "./wait-for-it.sh db && npx sequelize-cli db:migrate && npm run dev" # aguarda o banco de dados ficar 100% pronto para executar (sem isso pode dar erro de tentar executar o banco sem ele ter sido iniciado ainda)
     depends_on:
       - db # garante que o conteiner 'db' seja iniciado antes do 'app'
 
@@ -18,9 +18,9 @@ services:
     image: postgres:latest # Imagem oficial do postgres do docker hub
     restart: always # se o conteiner parar de funcionar por qualquer motivo, tenta iniciar novamente
     environment: 
+      POSTGRES_DB: ${POSTGRES_DB} # nome do banco de dados definido no databse.js
       POSTGRES_USER: ${POSTGRES_USERNAME}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} # senha definida no database.js [ usando a senha do .env ]
-      POSTGRES_DB: ${POSTGRES_DB} # nome do banco de dados definido no databse.js
     volumes:
       - ./postgres-data:/var/lib/postgresql/data # persiste os dados em uma pasta local
     ports:

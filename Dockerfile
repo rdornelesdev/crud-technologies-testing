@@ -14,5 +14,5 @@ RUN npm install
 # Copia todo o código do projeto para o diretorio de trabalho 
 COPY . .
 
-# Comando pra iniciar a aplicação
+# Comando para rodar as migrações e depois iniciar a aplicação
 CMD [ "npm", "run", "dev" ]
