@@ -1,0 +1,25 @@
+# Diretórios e arquivos gerados automaticamente pelo npm
+node_modules/
+npm-debug.log
+.npm/
+
+# Arquivos de log gerados pelo Docker
+*.log
+
+# Arquivos de dados gerados pelo PostgreSQL (importante!)
+postgres-data/
+
+# Arquivos de variáveis de ambiente com informações sensíveis
+.env
+
+# Arquivos de sistema e de cache do sistema operacional (Mac/Linux)
+.DS_Store
+Thumbs.db
+
+# Arquivos de cache e de build do Visual Studio Code
+.vscode/
+
+# Arquivos de cache do Docker
+.dockerignore
+.docker/
+
