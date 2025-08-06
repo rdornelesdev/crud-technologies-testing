@@ -20,7 +20,7 @@ services:
     environment: 
       POSTGRES_USER: ${POSTGRES_USERNAME}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} # senha definida no database.js [ usando a senha do .env ]
-      POSTGRES_DB: projetoDockerNode # nome do banco de dados definido no databse.js
+      POSTGRES_DB: ${POSTGRES_DB} # nome do banco de dados definido no databse.js
     volumes:
       - ./postgres-data:/var/lib/postgresql/data # persiste os dados em uma pasta local
     ports:
