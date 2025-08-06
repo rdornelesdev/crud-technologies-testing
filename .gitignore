@@ -26,6 +26,3 @@ Thumbs.db
 # Comandos txt (anotações de comandos executados)
 comandos.txt
 
-# Ignorar o database.js
-src/config/database.js
-
