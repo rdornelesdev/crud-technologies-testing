@@ -9,7 +9,6 @@ export const createUser = async (req, res) => {
         const userToCreate = {
             id: crypto.randomUUID(),
             ...req.body
-            // podia usar o spread operator: ...req.body
         }
 
         const user = await User.create(userToCreate);
