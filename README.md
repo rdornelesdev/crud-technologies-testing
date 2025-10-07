@@ -1,7 +1,7 @@
-🚀 Tecnologias Utilizadas:
-Node.js — Ambiente de execução JavaScript no servidor
-Express — Framework para criação de APIs REST.
-Sequelize — ORM para comunicação com o banco de dados.
-PostgreSQL — Banco de dados relacional.
-Docker & Docker Compose — Containerização e orquestração básica.
-JavaScript (ES6+) — Linguagem principal do projeto.
+🚀 Technologies Used:
+Node.js — JavaScript runtime environment for server-side execution.
+Express — Framework for creating REST APIs.
+Sequelize — ORM (Object-Relational Mapper) for database communication.
+PostgreSQL — Relational database.
+Docker & Docker Compose — Containerization and basic orchestration.
+JavaScript (ES6+) — Primary language for the project.
